@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KopiPro — Mesin Fotokopi untuk Kantor Anda</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="#" class="flex items-center gap-2 text-xl font-extrabold text-blue-700">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V3h12v6M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v7H6z"/>
+          </svg>
+        </span>
+        KopiPro
+      </a>
+
+      <ul class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
+        <li><a href="#" class="hover:text-blue-700">Beranda</a></li>
+        <li><a href="#produk" class="hover:text-blue-700">Produk</a></li>
+        <li><a href="#fitur" class="hover:text-blue-700">Fitur</a></li>
+        <li><a href="#harga" class="hover:text-blue-700">Harga</a></li>
+        <li><a href="#kontak" class="hover:text-blue-700">Kontak</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">Masuk</a>
+        <button id="menu-btn" class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 md:hidden" aria-label="Buka menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden">
+      <ul class="flex flex-col px-5 py-3 text-sm font-medium text-slate-700">
+        <li><a href="#" class="block py-2">Beranda</a></li>
+        <li><a href="#produk" class="block py-2">Produk</a></li>
+        <li><a href="#fitur" class="block py-2">Fitur</a></li>
+        <li><a href="#harga" class="block py-2">Harga</a></li>
+        <li><a href="#kontak" class="block py-2">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-600 to-sky-500 text-white">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:py-28">
+        <div>
+          <h1 class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            Fotokopi cepat, jernih, dan hemat untuk kantor Anda
+          </h1>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-blue-50">
+            Mesin kopier KopiPro mencetak hingga 45 halaman per menit dengan hasil tajam dan biaya per lembar yang rendah. Pasang di kantor Anda, kami yang merawat.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#produk" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-blue-700 shadow-lg transition hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-700">
+              Lihat produk
+            </a>
+            <a href="#kontak" class="inline-flex items-center justify-center rounded-lg border-2 border-white/80 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-700">
+              Minta penawaran
+            </a>
+          </div>
+        </div>
+
+        <!-- Ilustrasi mesin kopier (SVG sederhana) -->
+        <div class="flex justify-center">
+          <svg viewBox="0 0 320 260" class="w-full max-w-md drop-shadow-2xl" role="img" aria-label="Ilustrasi mesin kopier">
+            <rect x="30" y="90" width="260" height="120" rx="14" fill="#ffffff"/>
+            <rect x="30" y="70" width="260" height="34" rx="10" fill="#dbeafe"/>
+            <rect x="50" y="52" width="220" height="24" rx="6" fill="#bfdbfe"/>
+            <rect x="48" y="122" width="150" height="10" rx="5" fill="#93c5fd"/>
+            <rect x="48" y="142" width="110" height="10" rx="5" fill="#dbeafe"/>
+            <rect x="222" y="118" width="48" height="34" rx="6" fill="#1d4ed8"/>
+            <circle cx="234" cy="135" r="4" fill="#7dd3fc"/>
+            <circle cx="250" cy="135" r="4" fill="#ffffff"/>
+            <rect x="60" y="188" width="200" height="10" rx="5" fill="#e2e8f0"/>
+            <rect x="80" y="210" width="160" height="34" rx="4" fill="#ffffff"/>
+            <rect x="92" y="220" width="100" height="5" rx="2.5" fill="#cbd5e1"/>
+            <rect x="92" y="231" width="70" height="5" rx="2.5" fill="#e2e8f0"/>
+            <rect x="48" y="214" width="14" height="30" rx="4" fill="#1e40af"/>
+            <rect x="258" y="214" width="14" height="30" rx="4" fill="#1e40af"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="kontak" class="bg-slate-900 text-slate-300">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="text-lg font-extrabold text-white">KopiPro</p>
+        <p class="mt-1 text-sm text-slate-400">Solusi mesin fotokopi untuk kantor dan usaha Anda.</p>
+      </div>
+      <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <li><a href="#produk" class="hover:text-white">Produk</a></li>
+        <li><a href="#fitur" class="hover:text-white">Fitur</a></li>
+        <li><a href="#harga" class="hover:text-white">Harga</a></li>
+        <li><a href="mailto:halo@kopipro.example" class="hover:text-white">halo@kopipro.example</a></li>
+      </ul>
+    </div>
+    <div class="border-t border-slate-800 py-4 text-center text-xs text-slate-500">
+      &copy; 2026 KopiPro. Semua hak dilindungi.
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  </script>
+</body>
+</html>
